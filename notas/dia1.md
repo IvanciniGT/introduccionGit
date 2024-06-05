@@ -267,15 +267,42 @@ git init                                                      cliente A,C       
                                                                /                            
 ---> master(main)                                            C3                               C11  
                                                             /                                /
----> release1                                             C3                        C10 -> C11       (cherry pick C12)
+---> release1                                             C3                        C10 -> C11       (cherry pick C12) P.Sistema (End2End)
                                                          /  \                      /         \        v
----> desarrollo, dev, desa, development--> C1 -> C2 -> C3 -> C9 ----------\----> C10 -------> C11 -> C13    ---------------> C11'
-                                                         \                 \    /                      \                   /
+---> desarrollo, dev, desa, development--> C1 -> C2 -> C3 -> C9 ----------+----> C10 -------> C11 -> C13    ---------------> C11'
+                                                         \                 \    / P Integración        \                   /
 ---> feature R1                                           C3 -> C4 -> C5 --> C10                        \                 /
                                                            \                                             \               /
 ---> feature R2                                             \                                           C13 -> C6' -> C11'
                                                              \
----> feature R3                                               C3 -> C7 -> C8
+---> feature R3                                               C3 -> C7 -> C8 P.Unitarias
+
+GITHOOKS: Son scripts que se ejecutan en determinados eventos de git.
+    - pre-commit
+    - post-commit
+    - pre-push
+    - post-push
+    - pre-rebase
+    - post-rebase
+    - pre-merge
+    - post-merge
+    - pre-checkout
+    - post-checkout
+    - pre-clone
+    - post-clone
+    - pre-receive
+    - post-receive
+    - pre-applypatch
+    - post-applypatch
+    - pre-commit-msg
+    - post-commit-msg
+    - prepare-commit-msg
+    - update
+    - pre-auto-gc
+    - post-rewrite
+    - sendemail-validate
+    - fsmonitor-watchman
+    - p4-ch
 
 FLOW DE GIT: Git Flow
              Github Flow
@@ -286,10 +313,19 @@ C9: MULTIPLICACION
 C10?: Fusión de la resta y la multiplicación
 ---
 
-# DEVOPS
+# DEV-->OPS
 
 Es una cultura, una filosofía, un movimiento... que defiende la automatización.
 
+## Integración Continua
+
+## Entrega Continua
+
+## Despliegue continuop
+
+## Jenkins
+
+## SonarQube
 ---
 
 # Versionado de software
